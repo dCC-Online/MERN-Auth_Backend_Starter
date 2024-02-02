@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "48e5fef2-7a00-451f-b2ba-b8ed52fc3347",
+		"name": "MERN_Auth_Starter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21116298"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dantheman\",\r\n    \"email\": \"dan@dcc.com\",\r\n    \"password\": \"Password@1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dantheman\",\r\n    \"password\": \"Password@1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJjMDg1ZTYyNDM1MzFhMTA3ODkyZjAiLCJ1c2VybmFtZSI6ImRhbnRoZW1hbiIsImlhdCI6MTcwNjgyODM5NH0.auS3tq4YfKQYbLYbTuezoFYmymxDpW06B3qJQtdhVtg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJjMDg1ZTYyNDM1MzFhMTA3ODkyZjAiLCJ1c2VybmFtZSI6ImRhbnRoZW1hbiIsImlhdCI6MTcwNjgyODM5NH0.auS3tq4YfKQYbLYbTuezoFYmymxDpW06B3qJQtdhVtg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"make\": \"Ford\",\r\n    \"model\": \"Fusion\",\r\n    \"year\": 2017\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/cars"
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJjMDg1ZTYyNDM1MzFhMTA3ODkyZjAiLCJ1c2VybmFtZSI6ImRhbnRoZW1hbiIsImlhdCI6MTcwNjgyODM5NH0.auS3tq4YfKQYbLYbTuezoFYmymxDpW06B3qJQtdhVtg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/cars/65bc11858d838053caa6063f"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJjMDg1ZTYyNDM1MzFhMTA3ODkyZjAiLCJ1c2VybmFtZSI6ImRhbnRoZW1hbiIsImlhdCI6MTcwNjgyODM5NH0.auS3tq4YfKQYbLYbTuezoFYmymxDpW06B3qJQtdhVtg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"make\": \"Honda\",\r\n    \"model\": \"Civic\",\r\n    \"year\": 2012\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/cars/65bc11858d838053caa6063f"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJjMDg1ZTYyNDM1MzFhMTA3ODkyZjAiLCJ1c2VybmFtZSI6ImRhbnRoZW1hbiIsImlhdCI6MTcwNjgyODM5NH0.auS3tq4YfKQYbLYbTuezoFYmymxDpW06B3qJQtdhVtg"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/cars/65bc11858d838053caa6063f"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
